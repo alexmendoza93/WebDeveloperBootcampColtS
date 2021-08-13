@@ -4,3 +4,5 @@ const args = process.argv.slice(2);
 for (let arg of args) {
     console.log(`Hola! ${arg}`)
 }
+
+// despues desde consola en la carpeta de este archivo ejecutamos: node greeter.js colt sam erny simon
