@@ -21,7 +21,7 @@ figlet.text('Oli desde el mas alla', {
         console.dir(err);
         return;
     }
-    console.log(data.brightWhite);
+    console.log(data.rainbow);
 });
 
 // figlet.fonts(function(err, fonts) {
