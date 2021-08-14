@@ -1,0 +1,15 @@
+{
+  "name": "artster",
+  "version": "1.0.0",
+  "description": "este es un paquete para crear arte desde la consolo con strings\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[a\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Mendoza",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "figlet": "^1.5.2"
+  }
+}
