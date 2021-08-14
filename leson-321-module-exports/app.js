@@ -2,9 +2,9 @@ const math = require("./math");
 // cuando mandas a llamar un archivo le debes de poner ./
 console.log(math.PI);
 
-console.log(math.square(5));
+console.log(math.square(55));
 
-console.log(math.add(123,56));
+console.log(math.add(1232,5456));
 
 // luego ejecutamos en terminal: node app.js
 // ----------------------------------

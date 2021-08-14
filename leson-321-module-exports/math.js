@@ -11,8 +11,19 @@ const add = (x,y) => x+y;
 // module.exports = "helloooo" (prueba)
 // no importa la informacion que tengamos en este archivo, lo unico que se exportara si se requiere es lo que este en module.exports
 
-module.exports.PI = PI;
-module.exports.square = square;
-module.exports.add = add;
+exports.PI = PI;
+exports.square = square;
+exports.add = add;
 
 // esto lo que crea es un objeto
+
+// --------------------------------
+// esto es otra forma de llamarlos
+
+// const math = {
+//     add: add,
+//     PI: PI,
+//     square: square
+// }
+
+// module.exports= math;
