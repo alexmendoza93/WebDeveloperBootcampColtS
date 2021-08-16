@@ -1,0 +1,15 @@
+{
+  "name": "langguesser",
+  "version": "1.0.0",
+  "description": "este es un miniprojecto para detectar un idioma al escribir un parrafo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Mendoza",
+  "license": "ISC",
+  "dependencies": {
+    "franc": "^6.0.0",
+    "langs": "^2.0.0"
+  }
+}
