@@ -1,3 +1,4 @@
+const { randomBytes } = require('crypto');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -15,6 +16,12 @@ app.get('/', (req, res) =>{
   res.render('home.ejs')
 });
 // con este metodo podemos renderizar archivos completos (poner la extension .ejs no es necesario)
+
+app.get('/rand', (req, res) =>{
+  const num = Math.floor(Math.random()*10)+1;
+  res.render('random',{bubbles: num})
+});
+// con este codigo de aqui corremos el archivo randomBytes.ejs desde nuestra terminal en: nodemon index.js y seleccionando en nuetro browser localhost:3000/rand
 
 // app.get('/', (req, res) =>{
 //   res.send('HI!')
