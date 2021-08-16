@@ -32,5 +32,10 @@ app.listen(3000, ()=>{
   console.log("listening on port 3000");
 })
 
-
+// ----------------------------------
+// ejercicio de subreddit
+app.get('/r/:subreddit', (req, res) =>{
+  const {subreddit} = req.params;
+  res.render('subreddit',{subreddit})
+});
 
