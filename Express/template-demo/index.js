@@ -3,7 +3,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 // esta constante es para agregar una habilidad extra a este archivo que es correr desde otro directorio que no sea este, de lo contrario no sirve
-
+// ---------------------------------------------
+// empecemos a usar archivos estaticos CSS,js, img etc
+app.use(express.static(path.join(__dirname, 'public')));
+// con path.join podemos ejeci¿utar nuestro codigo desde cualquier carpeta con la ruta absoluta
 
 app.set('view engine', 'ejs');
 // de esta forma ya estamos mandando a llamosr los archivos ejs por default
