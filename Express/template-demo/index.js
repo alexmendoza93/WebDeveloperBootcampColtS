@@ -39,3 +39,10 @@ app.get('/r/:subreddit', (req, res) =>{
   res.render('subreddit',{subreddit})
 });
 
+// ----------------------------
+// LOOPS en ejs
+app.get('/cats', (req, res) =>{
+  const cats = ['monty','elisa','burns','tamy','jr']
+  res.render('cats',{allCats:cats})
+});
+
