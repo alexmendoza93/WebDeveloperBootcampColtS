@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random</title>
+  </head>
+  <body>
+    <h1>tu numero al azar es: <%= bubbles %></h1>
+    <% if(bubbles%2 === 0) {%>
+    <h2>tu numero es un numero par</h2>
+    <% }else{ %>
+    <h2>tu numero es un numero impar</h2>
+    <% } %>
+    <h3><%= bubbles%2===0 ? 'even':'odd' %></h3>
+    <!-- con estos signos podemos enbeber codigo de js en el archivo ejs sin renderizar la logica -->
+  </body>
+</html>
