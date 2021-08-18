@@ -13,18 +13,22 @@ app.set('view engine', 'ejs');
 // fingimos una base de datos
 const comments = [
     {
+        id:1,
      username: 'Todd',
      comment: 'lolololol'   
     },
     {
+        id:2,
      username: 'Amy',
      comment: 'I really don´t like it'   
     },
     {
+        id:3,
      username: 'Rich',
      comment: 'this is great'   
     },
     {
+        id:4,
      username: 'Alex',
      comment: 'great stuff'   
     }
@@ -36,7 +40,7 @@ app.get('/comments', (req, res) => {
 });
 // --------------------------------------
 // empezamos a hacer nuestro propio servidor RESTful 
-app.get('/comments/new',(req,res)=>{
+app.get('/comments/new',(req, res) => {
     res.render('comments/new')
 })
 
@@ -45,6 +49,14 @@ app.post('/comments',(req, res) => {
     comments.push({username, comment});
     res.redirect('/comments');
 })
+
+// -----------------------------------------------
+// empezamos a trabajar con id
+app.get('/comments/:id', (req, res) => {
+    const {id} = req.params;
+    const comment = comments.find(c => c.id === parseInt(id));
+    res.render('comments/show', {comment})
+});
 
 
 app.get('/tacos', (req,res)=>{
