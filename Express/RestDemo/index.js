@@ -14,7 +14,7 @@ app.use(methodOverride('_method'))
 
 // -----------------------------
 // fingimos una base de datos
-const comments = [
+let comments = [
     {
         id: uuidv4(),
      username: 'Todd',
@@ -78,6 +78,18 @@ app.get('/comments/:id/edit', (req, res) => {
     const comment = comments.find(c => c.id === id);
     res.render('comments/edit', {comment})
 });
+
+// -------------------------------------------------
+// es hora de eliminar los comentarios!!!
+app.delete('/comments/:id', (req, res) => {
+    const { id } = req.params;
+    // con esto extraemos el id del path
+    // const foundComment = comments.find(c => c.id === id);
+    // con esto enconttramos un comentario
+   comments = comments.filter( c => c.id !== id);
+   res.redirect('/comments');
+})
+
 
 
 app.get('/tacos', (req,res)=>{
