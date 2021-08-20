@@ -19,7 +19,8 @@ const productSchema = new mongoose.Schema({
     },
     price: {
        type: Number,
-       required: true
+       required: true,
+       min: 0
     },
     onSale:{
         type: Boolean,
@@ -41,13 +42,18 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product', productSchema);
 
-const bike = new Product({name: 'Tire Pump', price: 19.99, categories: ['Cycling', 'Safety']})
-bike.save()
+// const bike = new Product({name: 'Tire Pump', price: 19.99, categories: ['Cycling', 'Safety']})
+// bike.save()
+// esto sirve para subir nuevos pruductos
+// ------------------------------------------------
+// ahora modifiquemos un pruducto
+Product.findOneAndUpdate({name:'Tire Pump'}, { price: -19.99}, { new: true, runValidators: true})
+// primero lo buscamos por su nombre en este CacheStorage, luego le actualizamos el precio en este CacheStorage, y luego le pedimos que nos muestre la actualizacion y como las validaciones solo sirven para nuevos productos las activamos tmb para actualizaciones
     .then(data => {
         console.log('funciono!')
         console.log(data)
     })
     .catch(err => {
         console.log('oh no, error!')
-        console.log(err.errors.name.properties.message)
+        console.log(err)
     })
