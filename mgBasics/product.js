@@ -20,7 +20,7 @@ const productSchema = new mongoose.Schema({
     price: {
        type: Number,
        required: true,
-       min: 0
+       min: [0, 'Demasiado barato amigo']
     },
     onSale:{
         type: Boolean,
@@ -36,7 +36,13 @@ const productSchema = new mongoose.Schema({
             type: Number,
             default: 0
         }
+    },
+    size: {
+        type: String,
+        enum: ['S', 'M', 'L']
+        // esta validacion es para que se meta una talla o lo que sea solo bajo esos parametros
     }
+
    
 });
 
