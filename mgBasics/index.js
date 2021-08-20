@@ -35,14 +35,14 @@ const Movie = mongoose.model('Movie', movieSchema);
 
 // ahora vamos a subir varias peliculas al mismo tiempo
 
-Movie.insertMany([
-    {title: 'Amelie', year: 2001, score: 8.3, rating:'R'},
-    {title: 'Alien', year: 1979, score: 8.9, rating:'R'},
-    {title: 'The Iron Giant', year: 1999, score: 9.2, rating:'PG'},
-    {title: 'Anabelle', year: 2005, score: 7.6, rating:'R'},
-    {title: 'Gladiator', year: 1998, score: 8.6, rating:'R'},
-])
-.then(data => {
-    console.log('Funciono!')
-    console.log(data);
-})
+// Movie.insertMany([
+//     {title: 'Amelie', year: 2001, score: 8.3, rating:'R'},
+//     {title: 'Alien', year: 1979, score: 8.9, rating:'R'},
+//     {title: 'The Iron Giant', year: 1999, score: 9.2, rating:'PG'},
+//     {title: 'Anabelle', year: 2005, score: 7.6, rating:'R'},
+//     {title: 'Gladiator', year: 1998, score: 8.6, rating:'R'},
+// ])
+// .then(data => {
+//     console.log('Funciono!')
+//     console.log(data);
+// })
